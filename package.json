@@ -1,0 +1,19 @@
+{
+  "name": "yiban_registration",
+  "version": "1.0.0",
+  "description": "yiban_registration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Davont/yiban_registration.git"
+  },
+  "author": "davont",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Davont/yiban_registration/issues"
+  },
+  "homepage": "https://github.com/Davont/yiban_registration#readme"
+}

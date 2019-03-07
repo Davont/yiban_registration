@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-    - 4
+    - 8
 install:
 |
     npm install -g npm@latest
@@ -8,3 +8,16 @@ install:
     npm install --registry http://registry.npmjs.org
 script:
     - npm run test-ci
+
+after_script: 
+- cd ./export_system 
+- git init 
+- git config user.name “davont 
+- git config user.email “zhang980511@outlook.com” 
+- git add . 
+- git commit -m “Update docs with TRAVIS-CI.” 
+- git push --force --quiet "https://${d0190b10edfef138bbda6574a924f989a4d33452}@${github.com/Davont/yiban_registration.git}" master:master
+
+env: 
+global: 
+- GH_REF: github.com/Davont/yiban_registration.git
