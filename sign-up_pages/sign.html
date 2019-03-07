@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>南京邮电大学易班发展中心招新报名表</title>
+    <link rel="icon" href="images/e-logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/layui.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.12.0/dist/av-min.js"></script>
+    <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script>
+    <script type='text/javascript' src='js/jquery.particleground.min.js'></script>
+    <script type='text/javascript' src='js/demo.js'></script>
+</head>
+
+<body>
+    <div id="particles" class="hg-30">
+        <div id="header">
+            <div id="icon-box">
+                <img src="images/logo.png">
+            </div>
+            <div id="intro-box">
+                <p>加入我们，一起追寻更好的自己</p>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <form class="layui-form" id="form">
+            <div class="layui-form-item">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>姓名</legend>
+                    <div class="layui-field-box">
+                        <input type="text" maxlength="18" name="name" required lay-verify="required|name" placeholder="请输入姓名(中文)"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                </fieldset>
+            </div>
+            <div class="layui-form-item">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>所在校区</legend>
+                    <div class="layui-field-box">
+                        <input type="radio" name="campus" value="仙林" title="仙林" checked>
+                        <input type="radio" name="campus" value="三牌楼" title="三牌楼">
+                    </div>
+                </fieldset>
+            </div>
+            <div class="layui-form-item">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>性别</legend>
+                    <div class="layui-field-box">
+                        <input type="radio" name="sex" value="男" title="男" checked>
+                        <input type="radio" name="sex" value="女" title="女">
+                    </div>
+                </fieldset>
+            </div>
+            <div class="layui-form-item">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>学号</legend>
+                    <div class="layui-field-box">
+                        <input type="text" name="stuNo" id="stuNo" required lay-verify="required|stuNo" placeholder="请输入学号"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                </fieldset>
+            </div>
+            <div class="layui-form-item">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>第一意向部门</legend>
+                    <div class="layui-field-box">
+                        <select name="department1" lay-verify="required" lay-filter="select1">
+                            <option value=""></option>
+                            <option value="技术部">技术部</option>
+                            <option value="设计部">设计部</option>
+                            <option value="事务部">事务部</option>
+                            <option value="外联部">外联部</option>
+                            <option value="项目部">项目部</option>
+                            <option value="宣传部">宣传部</option>
+                        </select>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="layui-form-item">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>第二意向部门</legend>
+                    <div class="layui-field-box">
+                        <select name="department2" lay-verify="required" lay-filter="select2">
+                            <option value="">请先完成第一意向部门填写</option>
+
+                        </select>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="layui-form-item">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>是否服从调剂</legend>
+                    <div class="layui-field-box">
+                        <input type="radio" name="canChange" value="是" title="服从" checked>
+                        <input type="radio" name="canChange" value="否" title="不服从">
+                    </div>
+                </fieldset>
+            </div>
+            <div class="layui-form-item">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>手机号</legend>
+                    <div class="layui-field-box">
+                        <input type="tel" name="phoneNo" required lay-verify="required|phone" placeholder="请输入手机号"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                </fieldset>
+            </div>
+            <div class="layui-form-item">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>QQ号</legend>
+                    <div class="layui-field-box">
+                        <input type="tel" name="qqNo" required lay-verify="required|number" placeholder="请输入QQ号"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                </fieldset>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>自我介绍</legend>
+                    <div class="layui-field-box">
+                        <textarea name="selfIntro" required lay-verify="required" placeholder="请输入内容" class="layui-textarea"></textarea>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>兴趣爱好</legend>
+                    <div class="layui-field-box">
+                        <textarea name="hobby" required lay-verify="required" placeholder="请输入内容" class="layui-textarea"></textarea>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn layui-bg-blue" id="submit" lay-submit lay-filter="formDemo">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="layui.js"></script>
+    <script>
+        var APP_ID = '0BLVExeJDpfxDq6byDCAyEOY-gzGzoHsz';
+        var APP_KEY = 'tHgx3NwYodh4WsBVT3jiTYr7';
+        AV.init({
+            appId: APP_ID,
+            appKey: APP_KEY
+        });
+    </script>
+    <script>
+        function urlChange() {
+            window.location.href = 'result.html';
+        }
+        $("#stuNo").blur(function () {
+            var query = new AV.Query('StudentInfo');
+            if (!!$("#stuNo").val()) {
+                query.matches('stuNo', $("#stuNo").val());
+                query.first().then(function (results) {
+                    console.log(results.id)
+                    if (results.id) {
+                        alert("抱歉你的学号未填写完整或已被填写过表单！");
+                    }
+                }, function (error) {
+                    console.log(error);
+                });
+            }
+            // $.ajax({
+            //     url: "http://180.209.98.91/397938/q",
+            //     type: 'POST',
+            //     dataType: 'json',
+            //     data: {
+            //         stuNo: $("#stuNo").val()
+            //     },
+            //     success: function (data) {
+            //         console.log(data)
+            //         if (data.code === 300) {
+            //             alert("抱歉你的学号已被填写过表单！")
+            //         } else if (data.code === 200) {
+            //             console.log("成功！")
+            //         } else {
+            //             console.log("失败！")
+            //         }
+
+
+            //     },
+            //     error: function (request, errorType, errorMessage) {
+
+            //         console.log("失败：")
+            //         console.log(request)
+            //         console.log(errorType)
+            //         console.log(errorMessage)
+            //     }
+            // })
+        })
+        //Demo
+        layui.use('form', function () {
+            var form = layui.form;
+            //验证表单
+            form.verify({
+                stuNo: [
+                    /^[b,q,B,Q]{1}([0-9]){8}$/, '你的学号格式不对哦'
+                ],
+                name: [
+                    /^[\u4E00-\u9FA5\uf900-\ufa2d·s]{2,20}$/, '请填写正确的姓名哦'
+                ]
+            });
+            //监听select
+            form.on('select(select1)', function (data) {
+                $("select[name=department2]").empty();
+                //console.log($("select[name=department2] option[value="+data.value+"]")[0]);
+                let options = "<option value=''></option>" +
+                    "<option value='技术部'>技术部</option>" +
+                    "<option value='设计部'>设计部</option>" +
+                    "<option value='事务部'>事务部</option>" +
+                    "<option value='外联部'>外联部</option>" +
+                    "<option value='项目部'>项目部</option>" +
+                    "<option value='宣传部'>宣传部</option>"
+                $("select[name=department2]").append(options);
+                $("select[name=department2] option[value=" + data.value + "]")[0].remove();
+                form.render('select');
+                console.log(data.elem); //得到select原始DOM对象
+                console.log(data.value); //得到被选中的值
+                console.log(data.othis); //得到美化后的DOM对象
+            });
+            //监听提交
+            form.on('submit(formDemo)', function (submitData) {
+                console.log(submitData.field) //当前容器的全部表单字段，名值对形式：{name: value}
+                var StudentInfo = AV.Object.extend('StudentInfo');
+                var StudentInfo = new StudentInfo();
+                StudentInfo.set('campus', submitData.field.campus);
+                StudentInfo.set('canChange', submitData.field.canChange);
+                StudentInfo.set('department1', submitData.field.department1);
+                StudentInfo.set('department2', submitData.field.department2);
+                StudentInfo.set('hobby', submitData.field.hobby);
+                StudentInfo.set('name', submitData.field.name);
+                StudentInfo.set('phoneNo', submitData.field.phoneNo);
+                StudentInfo.set('qqNo', submitData.field.qqNo);
+                StudentInfo.set('selfIntro', submitData.field.selfIntro);
+                StudentInfo.set('sex', submitData.field.sex);
+                StudentInfo.set('stuNo', submitData.field.stuNo);
+                let returned = confirm("确定提交吗？");
+                if (returned) {
+                    StudentInfo.save().then(function (StudentInfo) {
+                        layer.msg("报名成功！");
+                        setTimeout("urlChange()", 2000);
+                        console.log(StudentInfo)
+                        // 成功
+                    }, function (error) {
+                        alert(error)
+                        // 失败
+                    });
+
+                }
+
+                // $.ajax({
+                //     url: "http://eclass.njupt.edu.cn/397938/q",
+                //     type: 'POST',
+                //     dataType: 'json',
+                //     data: submitData.field,
+                //     success: function (data) {
+                //         if (data.code === 200) {
+                //             layer.msg("报名成功！");
+                //             setTimeout("urlChange()", 2000);
+                //         } else if (data.code === 825) {
+                //             layer.msg("抱歉你的学号已被填写过表单！")
+                //         } else if (data.code === 826) {
+                //             layer.msg("抱歉你的手机号已被填写过表单！")
+                //         } else {
+                //             layer.msg("报名失败，请重新报名！");
+                //         }
+
+                //     },
+                //     error: function (request, errorType, errorMessage) {
+
+                //         console.log("失败：")
+                //         console.log(request)
+                //         console.log(errorType)
+                //         console.log(errorMessage)
+                //     }
+                // })
+                // confirm("确定提交吗？");
+                return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
+            });
+        });
+    </script>
+</body>
+
+</html>
