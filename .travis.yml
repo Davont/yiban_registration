@@ -10,7 +10,7 @@ script:
     - npm run test-ci
 
 after_script: 
-- cd ./export_system 
+- cd ./sign-up_pages 
 - git init 
 - git config user.name “davont 
 - git config user.email “zhang980511@outlook.com” 
