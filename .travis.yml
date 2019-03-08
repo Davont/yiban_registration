@@ -1,0 +1,28 @@
+language: node_js
+node_js: stable
+
+cache:
+  directories:
+    - node_modules
+
+ before_script:
+ - npm install -g gulp
+
+# S: Build Lifecycle
+install:
+  - npm install
+
+
+script:
+  - gulp clean
+  - gulp
+
+after_script:
+  #  - cd ./public
+  #  - git init
+  - git config user.name "davont"
+  - git config user.email "zhang980511@outlook.com"
+  #  - git add .
+  #  - git commit -m "Update docs"
+  #  - git push --force --quiet "${Travis}@${GH_REF}" master:master
+  - sed -i "s/Travis/${Travis}/g" ./_config.yml
