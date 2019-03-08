@@ -1,5 +1,7 @@
 # Eclass Registration system
 
+[![Build Status](https://www.travis-ci.org/Davont/yiban_registration.svg?branch=master)](https://www.travis-ci.org/Davont/yiban_registration)
+
 _The system provides online registration service for freshmen of yiban_
 
 ## Usage
@@ -8,7 +10,12 @@ This project is mainly divided into two parts: the front-end display page and th
 
     .
     ├── export_system           # Export student information
-    ├── sign-up_pages
+    ├── src                     # frontend files
+    ├──.babelrc
+    ├──.travis.yml
+    ├──gulpfile.js
+    ├──package.json
+    ├──.coveralls.yml
     └── README.md
 
 ## Front-end sign-up page
@@ -16,13 +23,21 @@ This project is mainly divided into two parts: the front-end display page and th
     # Clone the repo
     git clone https://github.com/Davont/yiban_registration.git
 
-    # Install http-server (install Node and NPM first)
-    npm install http-server -g
-
     # Find your folder
     cd yiban_registration
 
+    # Install http-server (install Node and NPM first)
+    npm install
+
+    #build
+    gulp
+
+    #clean
+    gulp clean
+
     # Start
+    cd src
+    npm install http-server
     http-server
 
 ## Export_system
