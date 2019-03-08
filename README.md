@@ -1,6 +1,7 @@
 # Eclass Registration system
 
 [![Build Status](https://www.travis-ci.org/Davont/yiban_registration.svg?branch=master)](https://www.travis-ci.org/Davont/yiban_registration)
+[![Coverage Status](https://coveralls.io/repos/github/Davont/yiban_registration/badge.svg?branch=master)](https://coveralls.io/github/Davont/yiban_registration?branch=master)
 
 _The system provides online registration service for freshmen of yiban_
 
