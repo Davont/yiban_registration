@@ -4,7 +4,9 @@
   "description": "yiban_registration",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec",
+    "cover": "./node_modules/.bin/istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,10 @@
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "babel-preset-env": "^1.7.0",
+    "chai": "^4.2.0",
     "del": "^4.0.0",
+    "diff": "^4.0.1",
+    "flat": "^4.1.0",
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-cache": "^1.1.1",
@@ -32,9 +37,18 @@
     "gulp-rename": "^1.4.0",
     "gulp-uglify": "^3.0.2",
     "imagemin-pngquant": "^7.0.0",
-    "run-sequence": "^2.2.1"
+    "isexe": "^2.0.0",
+    "istanbul": "^0.4.5",
+    "log-symbols": "^2.2.0",
+    "mocha": "^6.0.2",
+    "run-sequence": "^2.2.1",
+    "supports-color": "^6.1.0",
+    "wide-align": "^1.1.3"
   },
   "dependencies": {
-    "mddir": "^1.1.1"
+    "glob": "^7.1.3",
+    "mddir": "^1.1.1",
+    "mocha": "^6.0.2",
+    "object.assign": "^4.1.0"
   }
 }

@@ -1,8 +1,8 @@
 # Eclass Registration system
 
 [![Build Status](https://www.travis-ci.org/Davont/yiban_registration.svg?branch=master)](https://www.travis-ci.org/Davont/yiban_registration)
-[![Coverage Status](https://coveralls.io/repos/github/Davont/yiban_registration/badge.svg?branch=master)](https://coveralls.io/github/Davont/yiban_registration?branch=master)
-
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FDavont%2Fyiban_registration.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FDavont%2Fyiban_registration?ref=badge_shield)
 _The system provides online registration service for freshmen of yiban_
 
 ## Usage
