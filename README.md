@@ -8,7 +8,7 @@ This project is mainly divided into two parts: the front-end display page and th
 
     .
     ├── export_system           # Export student information
-    ├── sign-up_pages           # files about frontend display
+    ├── sign-up_pages
     └── README.md
 
 ## Front-end sign-up page
