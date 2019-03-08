@@ -1,23 +1,28 @@
 language: node_js
-node_js:
-    - 8
+node_js: stable
+
+cache:
+  directories:
+    - node_modules
+
+ before_script:
+ - npm install -g gulp
+
+# S: Build Lifecycle
 install:
-|
-    npm install -g npm@latest
-    npm --version
-    npm install --registry http://registry.npmjs.org
+  - npm install
+
+
 script:
-    - npm run test-ci
+  - gulp clean
+  - gulp
 
-after_script: 
-- cd ./sign-up_pages 
-- git init 
-- git config user.name “davont 
-- git config user.email “zhang980511@outlook.com” 
-- git add . 
-- git commit -m “Update docs with TRAVIS-CI.” 
-- git push --force --quiet "https://${d0190b10edfef138bbda6574a924f989a4d33452}@${github.com/Davont/yiban_registration.git}" master:master
-
-env: 
-global: 
-- GH_REF: github.com/Davont/yiban_registration.git
+after_script:
+  #  - cd ./public
+  #  - git init
+  - git config user.name "davont"
+  - git config user.email "zhang980511@outlook.com"
+  #  - git add .
+  #  - git commit -m "Update docs"
+  #  - git push --force --quiet "${Travis}@${GH_REF}" master:master
+  - sed -i "s/Travis/${Travis}/g" ./_config.yml
